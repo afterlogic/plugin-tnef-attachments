@@ -1,7 +1,5 @@
 <?php
 
-/* -AFTERLOGIC LICENSE HEADER- */
-
 class_exists('CApi') or die();
 
 CApi::Inc('common.plugins.expand-attachment');
@@ -30,7 +28,6 @@ class CTnefAttachmentsPlugin extends AApiExpandAttachmentPlugin
 		$oTNEF = new TNEF();
 		if ($oTNEF)
 		{
-			$this->debug = true;
 			$aData = $oTNEF->Decode(file_get_contents($sFullFilePath));
 			if (is_array($aData))
 			{
